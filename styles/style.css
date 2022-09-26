@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    border-radius: 25px;
+    border: 1px #ee0000 solid;
+}
+
+body {
+    min-width: 320px;
+    max-width: 1260px;
+    box-sizing: border-box;
+    /*background-image: url("");*/
+}
+
+html, body, #container {
+    height: 100%;
+}
+
+.info {
+    width: 26rem;
+}
+
+.info {
+    display: none;
+}
+
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5% 15%;
+}
+
+.mainInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 55%;
+    align-content: flex-start;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7%;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: center;
+    width: 90%;
+}
+
+.top span {
+    font-size: 14px;
+    line-height: 16px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.map {
+    width: 40%;
+}
+
+
+#location {
+    height: 30px;
+    width: 42%;
+    overflow: hidden;
+    line-height: 30px;
+}
+
+#currentTime {
+    overflow: hidden;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    width: 30%;
+}
+
+.iconDay {
+    overflow: hidden;
+
+}
+
+@media screen and (max-width: 720px) {
+    .map {
+        display: none;
+    }
+
+    .topInfo {
+        margin-top: 10%;
+    }
+
+    .mainInfo {
+        width: 100%;
+    }
+
+    #weatherIcon span {
+        font-size: 1em;
+    }
+
+
+}
+
+
+@media screen and (max-width: 900px) {
+    #currentTime {
+        display: none;
+    }
+
+    #weatherIcon span {
+        font-size: .8em;
+    }
+
+    #tomorrow {
+        display: none;
+    }
+
+    #twoDays {
+        display: none;
+    }
+
+    #chart {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #feelLike {
+        display: none;
+    }
+}
+
+#weatherIcon {
+    font-size: 4em;
+    overflow: hidden;
+    margin: -2% 7%;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: center;
+    width: 90%;
+    height: 100px;
+}
+
+
+.otherInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    height: 80px;
+    line-height: 38px;
+    margin: 7%;
+
+
+}
+
+.otherInfo span {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 10%;
+    height: 100%;
+}
+
+.otherInfo span p {
+    flex: 1;
+    height: 50%;
+}
+
+.future {
+    display: flex;
+    margin: -1% 15%;
+    width: 70%;
+    height: 200px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 40px;
+}
+
+.future div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    margin-left: 3%;
+}
+
+
+.future span {
+    width: 100%;
+    height: 20%;
+}
+
+#tomorrow > span:nth-child(2) {
+    flex: 2;
+    line-height: 80px;
+    font-size: 2em;
+}
+
+#twoDays > span:nth-child(2) {
+    flex: 2;
+    line-height: 80px;
+    font-size: 2em;
+}
+
+
+.future #chart {
+    margin-left: 7%;
+    height: 100%;
+    width: 60%;
+    text-align: center;
+    vertical-align: center;
+    font-size: 3em;
+    line-height: 200px;
+}
+

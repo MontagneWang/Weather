@@ -1,0 +1,240 @@
+@media screen and (max-width: 720px) {
+  body,
+  .future {
+    margin-top: 15% !important;
+  }
+  .map {
+    display: none;
+  }
+  .topInfo {
+    margin-top: 10%;
+  }
+  .mainInfo {
+    width: 100% !important;
+  }
+  #weatherIcon span {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 900px) {
+  #currentTime {
+    display: none;
+  }
+  #weatherIcon span {
+    font-size: 0.8em;
+  }
+  #tomorrow {
+    display: none;
+  }
+  #twoDays {
+    display: none;
+  }
+  #chart {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #feelLike {
+    display: none;
+  }
+}
+/* 弹窗背景 */
+#modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* 弹窗内容 */
+#modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 18% auto;
+  border: 1px solid #888;
+  width: 110px;
+  height: 110px;
+  z-index: 1001;
+}
+/* 关闭按钮 */
+#close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 设置关闭按钮的鼠标指针 */
+#close:hover,
+#close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.border {
+  border-radius: 25px;
+  border: 1px #66ccff solid;
+  overflow: hidden;
+  box-shadow: 7px 7px 7px #ccc;
+}
+body {
+  min-width: 320px;
+  max-width: 1260px;
+  height: 100%;
+  box-sizing: border-box;
+}
+#container {
+  height: 100%;
+}
+#container a,
+#container div.amap-copyright {
+  display: none !important;
+}
+.info {
+  width: 26rem;
+  display: none;
+}
+.topInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5% 15%;
+}
+.mainInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 55%;
+  align-content: flex-start;
+  background: #FFEEEE;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DDEFBB, #FFEEEE);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7%;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: center;
+  width: 90%;
+}
+.top span {
+  font-size: 14px;
+  line-height: 16px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.map {
+  width: 40%;
+}
+#location {
+  height: 30px;
+  width: 42%;
+  overflow: hidden;
+  line-height: 30px;
+}
+#currentTime {
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30%;
+}
+.iconDay {
+  overflow: hidden;
+}
+#weatherIcon {
+  font-size: 4em;
+  overflow: hidden;
+  margin: -2% 7%;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: center;
+  width: 90%;
+  height: 100px;
+}
+.otherInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 90%;
+  height: 80px;
+  line-height: 38px;
+  margin: 7%;
+}
+.otherInfo span {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 10%;
+  height: 100%;
+}
+.otherInfo span p {
+  flex: 1;
+  height: 50%;
+}
+.future {
+  display: flex;
+  margin: -1% 15%;
+  width: 70%;
+  height: 200px;
+  text-align: center;
+  vertical-align: center;
+  line-height: 40px;
+}
+.future div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+  margin-left: 3%;
+}
+.future span {
+  width: 100%;
+  height: 20%;
+}
+.future #tomorrow,
+.future #twoDays {
+  background: #2980B9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFFFF, #66ccff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFFFF, #66ccff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.future #tomorrow span:nth-child(2),
+.future #twoDays span:nth-child(2) {
+  flex: 2;
+  line-height: 80px;
+  font-size: 2em;
+}
+.future #chart {
+  margin-left: 7%;
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  vertical-align: center;
+  font-size: 3em;
+  line-height: 200px;
+}
+#chart {
+  background: url("https://cdn1.tianli0.top/gh/MontagneWang/picodemo/img/202209242006237.png") no-repeat bottom;
+  background-size: 100% 100%;
+}
+/*# sourceMappingURL=styleLess.css.map */

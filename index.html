@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>山遥路远_'s 天气站</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+          name="viewport">
+
+    <link href="/styles/styleLess.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css" rel="stylesheet">
+    <link href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<!-- 弹窗 -->
+<div id="modal">
+    <div id="modal-content">
+        请求数据出错<br>
+        点击任意位置<br>
+        将关闭弹窗，并尝试重新发送请求。<br>
+        （请打开定位权限）
+        <span id="close">&times;</span>
+    </div>
+</div>
+
+<nav class="topInfo">
+    <section class="mainInfo border">
+
+        <div class="top">
+            <div id="location" class="border">📍 定位中</div>
+            <span onclick="location.reload();" class="border">🔄更新数据</span>
+            <div id="currentTime" class="border">时间获取中</div>
+        </div>
+
+        <div id="weatherIcon" class="border">
+            <span id="statusNow"><i class="qi-100"></i> 正在测量</span>
+            <span id="feelLike" style="font-size: 14px; width: 100%;">体感温度 测量中</span>
+        </div>
+
+        <div class="otherInfo border">
+      <span>
+          <p id="maxTemp">测量中</p>
+          <p id="minTemp">测量中</p>
+      </span><span>
+          <p id="now.windDir">测量中</p>
+          <p id="now.windScale">测量中</p>
+      </span>
+            <span id="now.vis">能见度<br>测量中</span>
+            <span id="now.humidity">相对湿度<br>测量中</span>
+        </div>
+    </section>
+
+    <aside class="map border">
+        <div id='container'></div>
+        <!-- 调试时输出 -->
+        <div class="info">
+            <h4 id='status'></h4>
+            <p id='geoResult'></p>
+        </div>
+    </aside>
+</nav>
+
+<footer class="future">
+    <div id="tomorrow" class="border">
+        <span class="fxDate">日期</span>
+        <span class="iconDay">图标文字</span>
+        <span class="tempMax">高低温度</span>
+        <span class="tempMin">风向风力</span>
+    </div>
+
+    <div id="twoDays" class="border">
+        <span class="fxDate">日期</span>
+        <span class="iconDay">图标文字</span>
+        <span class="tempMax">高低温度</span>
+        <span class="tempMin">风向风力</span>
+    </div>
+
+    <div id="chart" class="border darkmode-ignore">
+        图表正在加载 ……
+    </div>
+</footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=0f680fc17ef03445c8e5548cc28a7225"
+        type="text/javascript"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.common.js"></script>
+<script src="/scripts/weather.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+</html>
